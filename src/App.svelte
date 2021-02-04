@@ -7,6 +7,7 @@
   import Cultos from "./pages/Cultos.svelte";
   import DetailPageCulto from './pages/Detail_cultos.svelte';
   import Devocional from "./pages/Devocional.svelte";
+  import DetailDevocional from "./pages/Detail_devocional.svelte";
 </script>
 
 <main>
@@ -31,6 +32,10 @@
       <Route path="/devocionales">
         <Navbar/>
         <Devocional />
+      </Route>
+      <Route path="/devocional/:id" let:params>
+        <Navbar/>
+        <DetailDevocional id={params.id} />
       </Route>
 
       <!--rutas de Canciones-->

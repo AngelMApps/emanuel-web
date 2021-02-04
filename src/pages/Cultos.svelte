@@ -22,7 +22,7 @@
       <div class="row">
         {#each listCultos as { _id, dia, description }}
           <div class="col s12 m6 l3">
-            <div class="gridlist">
+            <div>
               <Link class="link-routes" to="/culto/{_id}/{dia}">
                 <div class="card-panel teal lighten-3 center">
                   <span>

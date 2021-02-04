@@ -9,6 +9,7 @@
 	<link rel='icon' type='image/png' href='/favicon.jpg'>
 	<link rel='stylesheet' href='/global.css'>
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 	<link rel='stylesheet' href='/build/bundle.css'>
 
 	<script defer src='/build/bundle.js'></script>
@@ -17,12 +18,20 @@
 <body>
 	<script src="https://kit.fontawesome.com/359d976046.js" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
 	<script>
 		document.addEventListener('DOMContentLoaded',function(){
 			M.AutoInit();
+			var elems = document.querySelectorAll('.carousel');
+    		var instances = M.Carousel.init(elems,{
+				duration:400,
+				dist:-250,
+				shift:50,
+				indicators:true,
+				numVisible:3,
+			});
 		})
-		
-		
+
 	</script>
 	
 </body>
