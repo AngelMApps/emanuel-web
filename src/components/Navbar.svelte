@@ -1,8 +1,16 @@
 <script>
   // your script goes here
-  export let title = "Lista de Canciones";
-  export let clear = false;
-  export let to="/";
+  import { Link } from "svelte-routing";
+  let rNav = false;
+  function navbarResponsive() {
+    rNav = !rNav;
+    console.log(rNav);
+  }
+  let routes = [
+    { name: "Cultos", route: "/cultos" },
+    {name:"Devocionales", route:"/devocionales"},
+    {name:"Canciones", route: "/canciones"},
+  ];
 </script>
 
 <!-- markup (zero or more items) goes here -->
@@ -10,77 +18,148 @@
 <main>
   <nav>
     <div class="nav-wrapper">
-      <a href={to} class="left brand-logo">{title}</a>
-      {#if clear == true } 
-      <ul  class="right ">
-        <li><a href="/"><i class="material-icons">clear</i></a></li>
+        <i on:click={navbarResponsive} class=" right material-icons">menu</i>
+      <span class="title left brand-logo">
+        <Link to="/">Iglesia Emanuel</Link>
+      </span>
+      <ul id="nav-mobile" class="right links-responsive">
+        {#each routes as {name,route}}
+                <li><Link to={route}>{name}</Link></li>
+        {/each}
+
       </ul>
-      {/if}
     </div>
   </nav>
+
+  <div class={rNav == false ? "side" : "sidebar"}>
+    <ul class="left">
+      {#each routes as {name,route}}
+        <li><Link to={route}>{name}</Link></li>
+      {/each}
+    </ul>
+  </div>
 </main>
 
 <style>
   /* your styles go here */
   nav {
     background-color: cadetblue;
-    padding-left: 10px;
     overflow: hidden;
     position: fixed;
     width: 100%;
     top: 0;
-  } 
-  .material-icons{
-    font-size: 35px;
+    padding-left: 1.9px;
+    padding-right: 2px;
+    z-index: 100;
   }
-  @media only screen and (max-width: 503px) {
-    .brand-logo {
-      font-size: 29px;
-    }
-    nav{
-      border-bottom-left-radius: 30px;
-      border-bottom-right-radius: 30px;
+  .sidebar {
+    background-color: aqua;
+    height: 300px;
+    top: 60px;
+    width: 100%;
+    right: 0;
+    position: fixed;
+    transition: all 0.6s;
+    z-index: 1;
+  }
+  .side {
+    background-color: aqua;
+    height: 300px;
+    width: 100%;
+    position: fixed;
+    transition: all 1s;
+    top: -400px;
+  }
+  .material-icons {
+    font-size: 40px;
+    display: none;
+  }
+  @media only screen and (max-width: 601px) {
+    nav {
       height: 10vh;
     }
   }
+  @media only screen and (max-width: 581px) {
+    .material-icons {
+      font-size: 40px;
+      display: block;
+    }
+    nav {
+      height: 9.6vh;
+    }
+    .links-responsive {
+      display: none;
+    }
+  }
+  @media only screen and (max-width: 503px) {
+    .title {
+      font-size: 29px;
+    }
+    nav {
+      height: 11vh;
+    }
+  }
   @media only screen and (max-width: 430px) {
-    .brand-logo {
+    .title {
       font-size: 26px;
       font-weight: bold;
     }
-    nav{
-      border-bottom-left-radius: 30px;
-      border-bottom-right-radius: 30px;
+    nav {
+      height: 8.6vh;
     }
   }
   @media only screen and (max-width: 380px) {
-    .brand-logo {
+    .title {
       font-size: 24px;
       font-weight: bold;
     }
+    nav {
+      height: 8.6vh;
+    }
   }
   @media only screen and (max-width: 346px) {
-    .brand-logo {
+    .title {
       font-size: 23px;
       font-weight: bold;
     }
+    nav {
+      height: 11vh;
+    }
+  }
+  @media only screen and (max-width: 281px) {
+    .title {
+      font-size: 19px;
+      font-weight: bolder;
+    }
+    nav {
+      height: 10.6vh;
+    }
   }
   @media only screen and (max-width: 277px) {
-    .brand-logo {
-      font-size: 20px;
+    .title {
+      font-size: 19px;
       font-weight: bolder;
+    }
+    nav {
+      height: 11vh;
     }
   }
   @media only screen and (max-width: 241px) {
-    .brand-logo {
-      font-size: 18px;
+    .title {
+      font-size: 17px;
       font-weight: bolder;
+    }
+    nav {
+      height: 11vh;
     }
   }
   @media only screen and (max-width: 206px) {
-    .brand-logo {
+    .title {
       font-size: 16px;
       font-weight: bolder;
+    }
+    nav {
+      height: 11vh;
     }
   }
 </style>
