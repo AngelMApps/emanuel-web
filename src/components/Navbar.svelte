@@ -32,9 +32,9 @@
   </nav>
 
   <div class={rNav == false ? "side" : "sidebar"}>
-    <ul class="left">
+    <ul class="ul-links-res">
       {#each routes as {name,route}}
-        <li><Link to={route}>{name}</Link></li>
+        <li><Link to={route}><span class="link-nav-res">{name}</span></Link></li>
       {/each}
     </ul>
   </div>
@@ -52,9 +52,20 @@
     padding-right: 2px;
     z-index: 100;
   }
+  .link-nav-res{
+    color: white;
+    font-size: 20px;
+  }
+  .ul-links-res{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .ul-links-res li{
+    margin-left: 10px;
+  }
   .sidebar {
-    background-color: aqua;
-    height: 300px;
+    background-color: rgb(115, 185, 187);
+    height: 100px;
     top: 60px;
     width: 100%;
     right: 0;
@@ -63,12 +74,12 @@
     z-index: 1;
   }
   .side {
-    background-color: aqua;
+    background-color: rgb(115, 185, 187);
     height: 300px;
     width: 100%;
     position: fixed;
     transition: all 1s;
-    top: -400px;
+    top: -300px;
   }
   .material-icons {
     font-size: 40px;
@@ -78,6 +89,16 @@
     nav {
       height: 10vh;
     }
+    .sidebar {
+    height: 90px;
+    top: 50px;
+    width: 100%;
+    right: 0;
+    position: fixed;
+    transition: all 0.6s;
+    z-index: 1;
+  }
+    
   }
   @media only screen and (max-width: 581px) {
     .material-icons {
@@ -107,6 +128,14 @@
     nav {
       height: 8.6vh;
     }
+    .sidebar {
+    top: 46px;
+    width: 100%;
+    right: 0;
+    position: fixed;
+    transition: all 0.6s;
+    z-index: 1;
+  }
   }
   @media only screen and (max-width: 380px) {
     .title {
@@ -125,6 +154,14 @@
     nav {
       height: 11vh;
     }
+    .sidebar {
+    top: 50px;
+    width: 100%;
+    right: 0;
+    position: fixed;
+    transition: all 0.6s;
+    z-index: 1;
+  }
   }
   @media only screen and (max-width: 281px) {
     .title {

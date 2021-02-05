@@ -1,36 +1,25 @@
 <script>
   // your script goes here
+
+import Fondo from "../components/Fondo.svelte";
+import Footer from "../components/Footer.svelte";
+
+ 
 </script>
 
 <!-- markup (zero or more items) goes here -->
 <main>
-  <div class="carousel">
-    <div class="carousel-item">
-      <img src="favicon.jpg" alt="hola" />
-    </div>
-    <div class="carousel-item">
-      <img src="favicon.jpg" alt="hola"  />
-    </div>
-    <div class="carousel-item">
-      <img src="favicon.jpg"  alt="hola" />
-    </div>
-    <div class="carousel-item">
-      <img src="favicon.jpg" alt="hola"  />
-    </div>
-  </div>
+ <div class="container-div">
+  <Fondo/>
+  <Footer/>
+ </div>
 </main>
 
 <style>
   /* your styles go here */
-  main {
-    background-color: #ecb0a1;
-    min-height: 100vh;
+  .container-div{
+    display: flex;
+    flex-direction: column;
   }
-  .carousel {
-    min-height: 500px;
-  }
-  .carousel .carousel-item {
-    width: 400px;
-    height: 400px;
-  }
+  
 </style>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset='utf-8'>
 	<meta name='viewport' content='width=device-width,initial-scale=1'>
@@ -18,21 +19,13 @@
 <body>
 	<script src="https://kit.fontawesome.com/359d976046.js" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
 	<script>
-		document.addEventListener('DOMContentLoaded',function(){
+		document.addEventListener('DOMContentLoaded', function () {
 			M.AutoInit();
-			var elems = document.querySelectorAll('.carousel');
-    		var instances = M.Carousel.init(elems,{
-				duration:400,
-				dist:-250,
-				shift:50,
-				indicators:true,
-				numVisible:3,
-			});
-		})
-
+			var elems = document.querySelectorAll('.parallax');
+			var instances = M.Parallax.init(elems);
+		});
 	</script>
-	
 </body>
+
 </html>
