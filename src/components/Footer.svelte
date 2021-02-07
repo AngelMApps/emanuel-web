@@ -25,7 +25,7 @@
           </ul>
         </div>
         <div class="col l4 offset-l2 s12">
-          <h5 class="white-text center">Links</h5>
+          <h5 class="white-text center">Síguenos</h5>
           <ul class="center ul-style">
             <li>
               <a

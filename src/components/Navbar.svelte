@@ -171,6 +171,14 @@
     nav {
       height: 10.6vh;
     }
+    .sidebar {
+    top: 55px;
+    width: 100%;
+    right: 0;
+    position: fixed;
+    transition: all 0.6s;
+    z-index: 1;
+  }
   }
   @media only screen and (max-width: 277px) {
     .title {
