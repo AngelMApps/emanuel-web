@@ -58,9 +58,7 @@
     <div class="footer-copyright">
       <div class="container">
         © 2021 Iglesia Emanuel
-        <span class="grey-text text-lighten-4 right"
-          >Bendiciones!!!</span
-        >
+        <span class="grey-text text-lighten-4 right">Bendiciones!!!</span>
       </div>
     </div>
   </footer>
@@ -113,14 +111,14 @@
   .white-text {
     font-size: 50px;
   }
-  @media only screen and (max-width: 273px){
-      .white-text{
-          font-size: 43px;
-      }
+  @media only screen and (max-width: 273px) {
+    .white-text {
+      font-size: 43px;
+    }
   }
-  @media only screen and (max-width: 267px){
-      .text-lighten-4{
-          display: none;
-      }
+  @media only screen and (max-width: 267px) {
+    .text-lighten-4 {
+      display: none;
+    }
   }
 </style>

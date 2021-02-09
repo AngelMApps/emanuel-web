@@ -22,12 +22,9 @@
 	<script>
 		document.addEventListener('DOMContentLoaded', function () {
 			M.AutoInit();
-			var elems = document.querySelectorAll('.carousel');
-			var instances = M.Carousel.init(elems,{
-				duration:150,
-				dist:-100,
-				numVisible:3,
-				indicators:true,
+			var elems = document.querySelectorAll('.parallax');
+			var instances = M.Parallax.init(elems, {
+				responsiveThreshold: 3,
 			});
 		});
 	</script>
