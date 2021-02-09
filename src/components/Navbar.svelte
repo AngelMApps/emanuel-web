@@ -87,7 +87,7 @@
   }
   @media only screen and (max-width: 601px) {
     nav {
-      height: 10vh;
+      height: 4rem;
     }
     .sidebar {
     height: 90px;
@@ -108,6 +108,14 @@
     nav {
       height: 9.6vh;
     }
+    .sidebar {
+    top: 57px;
+    width: 100%;
+    right: 0;
+    position: fixed;
+    transition: all 0.6s;
+    z-index: 1;
+  }
     .links-responsive {
       display: none;
     }
@@ -119,7 +127,16 @@
     nav {
       height: 11vh;
     }
+    .sidebar {
+    top: 65px;
+    width: 100%;
+    right: 0;
+    position: fixed;
+    transition: all 0.6s;
+    z-index: 1;
   }
+  }
+  
   @media only screen and (max-width: 430px) {
     .title {
       font-size: 26px;
@@ -137,14 +154,38 @@
     z-index: 1;
   }
   }
+  @media only screen and (max-width: 414px) {
+    .title {
+      font-size: 29px;
+    }
+    nav {
+      height: 4rem;
+    }
+    .sidebar {
+    top: 56px;
+    width: 100%;
+    right: 0;
+    position: fixed;
+    transition: all 0.6s;
+    z-index: 1;
+  }
+  }
   @media only screen and (max-width: 380px) {
     .title {
       font-size: 24px;
       font-weight: bold;
     }
     nav {
-      height: 8.6vh;
+      height: 4rem;
     }
+    .sidebar {
+    top: 50px;
+    width: 100%;
+    right: 0;
+    position: fixed;
+    transition: all 0.6s;
+    z-index: 1;
+  }
   }
   @media only screen and (max-width: 346px) {
     .title {
@@ -155,7 +196,7 @@
       height: 11vh;
     }
     .sidebar {
-    top: 50px;
+    top: 60px;
     width: 100%;
     right: 0;
     position: fixed;

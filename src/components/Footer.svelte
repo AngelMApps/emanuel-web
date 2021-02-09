@@ -64,6 +64,7 @@
   </footer>
 </main>
 
+<!-- markup (zero or more items) goes here -->
 <style>
   /* your styles go here */
   .page-footer {
@@ -111,6 +112,7 @@
   .white-text {
     font-size: 50px;
   }
+
   @media only screen and (max-width: 273px) {
     .white-text {
       font-size: 43px;

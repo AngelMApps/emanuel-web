@@ -9,21 +9,11 @@ body {
 }
 @media only screen and (max-width: 581px){
     body{
-        margin-top: 54px;
+        margin-top: 63px;
     }
 }
 @media only screen and (max-width: 503px){
     body{
-        margin-top: 61px;
-    }
-}
-@media only screen and (max-width: 430px){
-    body{
-        margin-top: 48px;
-    }
-}
-@media only screen and (max-width: 346px){
-    body{
-        margin-top: 60px;
+        margin-top: 70px;
     }
 }
