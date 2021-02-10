@@ -20,7 +20,7 @@
           <div class="col s12 m6 l6">
             <div class="card z-depth-4">
               <div class="card-content">
-                <span class="card-title">Card Title</span>
+                <span class="card-title">Pastores:</span>
                 <ul>
                   <span class="text-past">Neil Angel Mora Sanchez</span>
                   <br />
@@ -58,15 +58,16 @@
             <div class="card z-depth-4">
               <div class="card-content">
                 <span class="card-title">Misión:</span>
-                <p>Ganar la gran comisión a través de los Grupos Familiares</p>
+                <p>Cumplir la gran comisión a través de los Grupos Familiares</p>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   </div>
+  <Footer />
+      
 </main>
 
 <!-- markup (zero or more items) goes here -->
