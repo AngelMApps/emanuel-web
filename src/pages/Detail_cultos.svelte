@@ -29,8 +29,8 @@
         </div>
         <hr/>
         <div class="row">
-            {#each videos as {dia, fecha, videourl}}
-                {#if dia == culto.dia}
+            {#each videos as {dia, fecha,description, videourl}}
+                {#if description == culto.description}
                     <div class="col s12 m6 l3">
                         <div class="center card">
                             <div class="card-content white-text">
